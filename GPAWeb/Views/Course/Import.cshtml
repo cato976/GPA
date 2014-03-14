@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Import";
+}
+
+<h2>Import</h2>
+@using (Html.BeginForm("ImportExcel", "Course", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <table>
+        <tr>
+            <td>Excel file</td>
+            <td>
+                <input type="file" class="btn btn-small btn-primary" id="CourseUpload" name="CourseUpload" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" class="btn btn-small btn-primary" id="Submit" name="Submit" value="Submit" /></td>
+        </tr>
+    </table>
+}
