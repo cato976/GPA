@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [WebApp1]
+    WITH PASSWORD = N'hd;|,h{j,i@@2{xzwMtgWQCMmsFT7_&#$!~<qGyji|@gXfix', SID = 0x2067853F5C93764AB51E8C44A8D48E2A, DEFAULT_DATABASE = [Application_DB], DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+

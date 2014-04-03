@@ -1,0 +1,5 @@
+C:\Users\Dre\Documents\GitHub\GPA\Application_DB\bin\Debug\Application_DB.dacpac
+C:\Users\Dre\Documents\GitHub\GPA\Application_DB\bin\Debug\Application_DB.dll
+C:\Users\Dre\Documents\GitHub\GPA\Application_DB\bin\Debug\Application_DB.pdb
+C:\Users\Dre\Documents\GitHub\GPA\Application_DB\obj\Debug\Application_DB.dll
+C:\Users\Dre\Documents\GitHub\GPA\Application_DB\obj\Debug\Application_DB.pdb

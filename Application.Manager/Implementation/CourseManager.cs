@@ -17,7 +17,7 @@
 
         #endregion Global Declearation
 
-         #region Constructor
+        #region Constructor
 
         public CourseManager(CourseRepository courseRepository)
         {
@@ -96,10 +96,26 @@
                 //commit changes
                 _courseRepository.UnitOfWork.Commit();
             }
-            else //the customer not exist, cannot remove
+            else //the course does not exist, cannot remove
                 LoggerFactory.CreateLog().LogWarning(Messages.warning_CannotRemoveNonExistingCourse);
         }
 
-        #endregion
+        public void InsertCourse(CourseDTO course)
+        {
+            Core.CourseModule.CourseAggregate.Course cour = new Core.CourseModule.CourseAggregate.Course()
+                {
+                    Name = course.Name,
+                    Number = course.Number,
+                    OrganizationId=course.OrganizationId,
+                    UniversalId=course.UniversalId,
+                    Description=course.Description,
+                    ClockHour=course.CreditHour,
+                    CreditHour=course.CreditHour
+                };
+            _courseRepository.Add(cour);
+            _courseRepository.UnitOfWork.Commit();
+        }
+
+        #endregion Interface Implementation
     }
 }

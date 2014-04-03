@@ -1,0 +1,4 @@
+C:\Users\Dre\Documents\GitHub\GPA\Application.Common\bin\Debug\Application.Common.dll
+C:\Users\Dre\Documents\GitHub\GPA\Application.Common\bin\Debug\Application.Common.pdb
+C:\Users\Dre\Documents\GitHub\GPA\Application.Common\obj\Debug\Application.Common.dll
+C:\Users\Dre\Documents\GitHub\GPA\Application.Common\obj\Debug\Application.Common.pdb

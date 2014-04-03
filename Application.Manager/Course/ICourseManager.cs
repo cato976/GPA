@@ -25,5 +25,12 @@
         /// </summary>
         /// <param name="courseId"></param>
         void DeleteCourse(int courseId);
+
+        /// <summary>
+        /// To Insert a Course
+        /// </summary>
+        /// <param name="course"></param>
+        /// <returns></returns>
+        void InsertCourse(CourseDTO course);
     }
 }

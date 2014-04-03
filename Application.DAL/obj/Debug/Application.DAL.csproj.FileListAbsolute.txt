@@ -1,0 +1,16 @@
+C:\Users\Dre\Documents\GitHub\GPA\Application.DAL\bin\Debug\Application.DAL.dll.config
+C:\Users\Dre\Documents\GitHub\GPA\Application.DAL\bin\Debug\Application.DAL.dll
+C:\Users\Dre\Documents\GitHub\GPA\Application.DAL\bin\Debug\Application.DAL.pdb
+C:\Users\Dre\Documents\GitHub\GPA\Application.DAL\bin\Debug\Application.Common.dll
+C:\Users\Dre\Documents\GitHub\GPA\Application.DAL\bin\Debug\Application.Core.dll
+C:\Users\Dre\Documents\GitHub\GPA\Application.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Dre\Documents\GitHub\GPA\Application.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dre\Documents\GitHub\GPA\Application.DAL\bin\Debug\Application.Common.pdb
+C:\Users\Dre\Documents\GitHub\GPA\Application.DAL\bin\Debug\Application.Core.pdb
+C:\Users\Dre\Documents\GitHub\GPA\Application.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Dre\Documents\GitHub\GPA\Application.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dre\Documents\GitHub\GPA\Application.DAL\obj\Debug\Application.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Dre\Documents\GitHub\GPA\Application.DAL\obj\Debug\Application.DAL.Resources.Message.resources
+C:\Users\Dre\Documents\GitHub\GPA\Application.DAL\obj\Debug\Application.DAL.csproj.GenerateResource.Cache
+C:\Users\Dre\Documents\GitHub\GPA\Application.DAL\obj\Debug\Application.DAL.dll
+C:\Users\Dre\Documents\GitHub\GPA\Application.DAL\obj\Debug\Application.DAL.pdb

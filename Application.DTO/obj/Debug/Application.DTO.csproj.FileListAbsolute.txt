@@ -1,0 +1,4 @@
+C:\Users\Dre\Documents\GitHub\GPA\Application.DTO\bin\Debug\Application.DTO.dll
+C:\Users\Dre\Documents\GitHub\GPA\Application.DTO\bin\Debug\Application.DTO.pdb
+C:\Users\Dre\Documents\GitHub\GPA\Application.DTO\obj\Debug\Application.DTO.dll
+C:\Users\Dre\Documents\GitHub\GPA\Application.DTO\obj\Debug\Application.DTO.pdb

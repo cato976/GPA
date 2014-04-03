@@ -1,0 +1,9 @@
+C:\Users\Dre\Documents\GitHub\GPA\GPADB\bin\Debug\GPADB.dacpac
+C:\Users\Dre\Documents\GitHub\GPA\GPADB\bin\Debug\GPADB.dll
+C:\Users\Dre\Documents\GitHub\GPA\GPADB\bin\Debug\GPADB.pdb
+C:\Users\Dre\Documents\GitHub\GPA\GPADB\obj\Debug\GPADB.dll
+C:\Users\Dre\Documents\GitHub\GPA\GPADB\obj\Debug\GPADB.pdb
+C:\Users\Dre\Documents\GitHub\GPA\GPADB\obj\Debug\Model.xml
+C:\Users\Dre\Documents\GitHub\GPA\GPADB\obj\Debug\refactor.xml
+C:\Users\Dre\Documents\GitHub\GPA\GPADB\obj\Debug\postdeploy.sql
+C:\Users\Dre\Documents\GitHub\GPA\GPADB\obj\Debug\predeploy.sql

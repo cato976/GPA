@@ -40,7 +40,7 @@ var CoursesViewModel = function () {
     self.Courses = ko.observableArray([]);
 
     self.createCourse = function () {
-        alert("Create a new course");
+        //alert("Create a new course");
         window.location.href = '/Course/CreateEdit/0';
     };
 

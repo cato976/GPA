@@ -1,0 +1,13 @@
+C:\Users\Dre\Documents\GitHub\GPA\Application.Core\bin\Debug\Application.Core.dll
+C:\Users\Dre\Documents\GitHub\GPA\Application.Core\bin\Debug\Application.Core.pdb
+C:\Users\Dre\Documents\GitHub\GPA\Application.Core\bin\Debug\Application.Common.dll
+C:\Users\Dre\Documents\GitHub\GPA\Application.Core\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Dre\Documents\GitHub\GPA\Application.Core\bin\Debug\Lucene.Net.dll
+C:\Users\Dre\Documents\GitHub\GPA\Application.Core\bin\Debug\Application.Common.pdb
+C:\Users\Dre\Documents\GitHub\GPA\Application.Core\bin\Debug\Lucene.Net.pdb
+C:\Users\Dre\Documents\GitHub\GPA\Application.Core\bin\Debug\Lucene.Net.xml
+C:\Users\Dre\Documents\GitHub\GPA\Application.Core\obj\Debug\Application.Core.csprojResolveAssemblyReference.cache
+C:\Users\Dre\Documents\GitHub\GPA\Application.Core\obj\Debug\Application.Core.Resources.Messages.resources
+C:\Users\Dre\Documents\GitHub\GPA\Application.Core\obj\Debug\Application.Core.csproj.GenerateResource.Cache
+C:\Users\Dre\Documents\GitHub\GPA\Application.Core\obj\Debug\Application.Core.dll
+C:\Users\Dre\Documents\GitHub\GPA\Application.Core\obj\Debug\Application.Core.pdb

@@ -51,10 +51,10 @@ namespace GPAWeb.Controllers
             return this.Json(courses, JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult CreateEdit()
-        {
-            return View();
-        }
+        //public ActionResult CreateEdit()
+        //{
+        //    return View();
+        //}
 
         /// <summary>
         /// Delete an existing course
@@ -78,6 +78,35 @@ namespace GPAWeb.Controllers
             //return View();
 
             //return RedirectToAction("Index");
+        }
+
+        [System.Web.Http.HttpPost]
+        
+        public ActionResult CreateEdit(Models.CourseModel course)
+        {
+            return View();
+        }
+
+        [System.Web.Http.HttpPost]
+        public JsonResult SaveCourse(Models.CourseModel course)
+        {
+            if (course != null)
+            {
+                Application.DTO.CourseModule.CourseDTO cour = new Application.DTO.CourseModule.CourseDTO()
+                {
+                    OrganizationId = course.OrganizationId,
+                    UniversalId = course.UniversalId,
+                    Name = course.Name,
+                    Number = course.CourseNumber,
+                    ClockHour = course.ClockHour,
+                    CreditHour = course.CreditHour,
+                    Description = course.Description,
+
+                };
+                _courseManager.InsertCourse(cour);
+            }
+
+            return Json("Success!!");
         }
 
         public ActionResult Import()
