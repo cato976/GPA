@@ -1,11 +1,12 @@
 ﻿namespace Application.Core.CourseModule.CourseAggregate
 {
     using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using Application.Common;
-    using Application.Core.Resources;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Application.Common;
+using Application.Core.CourseModule.OrganizationAggregate;
+using Application.Core.Resources;
 
     public partial class Course : Entity, IValidatableObject
     {
@@ -33,6 +34,8 @@
         public System.DateTime Created { get; set; }
 
         #endregion Properties
+
+        public virtual Organization Organization { get; set; }
 
         #region IValidatableObject Members
 

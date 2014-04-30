@@ -123,4 +123,7 @@
   <data name="validation_CourseNumberCannotBeBull" xml:space="preserve">
     <value>The Course Number cannot be null or empty string for Course</value>
   </data>
+  <data name="validation_OrganizationNameCannotBeNull" xml:space="preserve">
+    <value>The Organization Name cannot be null or empty string for Organization</value>
+  </data>
 </root>

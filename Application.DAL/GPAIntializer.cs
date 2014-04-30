@@ -1,20 +1,41 @@
 ﻿namespace Application.DAL
 {
     using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.Migrations;
-using Application.Core.CourseModule.CourseAggregate;
-using Application.DAL;
+    using System.Collections.Generic;
+    using System.Data.Entity;
+    using System.Data.Entity.Migrations;
+    using Application.Core.CourseModule.CourseAggregate;
+    using Application.Core.CourseModule.OrganizationAggregate;
+    using Application.DAL;
 
     public class GPAIntializer : DropCreateDatabaseIfModelChanges<UnitOfWork>
     {
         protected override void Seed(UnitOfWork context)
         {
+            context.Database.ExecuteSqlCommand(string.Format("ALTER TABLE {0} ADD DEFAULT ({1}) FOR [{2}]", "Organizations", "getdate()", "Created"));
+            var Organizations = new List<Organization>
+            {
+                new Organization{
+                    Address1 = "1 Main Street",
+                    City = "Springfield",
+                    State = "Massachusetts",
+                    ZipCode = "01111",
+                    Country= "USA",
+                    Campus="SpringField",
+                    OPEID="223-8765",
+                    Name="Big School",
+                    Created=DateTime.Now
+                }
+            };
+
+            Organizations.ForEach(o => context.Organization.Add(o));
+
+            context.SaveChanges();
+
             context.Database.ExecuteSqlCommand(string.Format("ALTER TABLE {0} ADD DEFAULT ({1}) FOR [{2}]", "Courses", "getdate()", "Created"));
             var Courses = new List<Course>{
                 new Course{
-                    OrganizationId=1,
+                    OrganizationId= Organizations[0].Id,
                     UniversalId="ACC10001",
                     Name = "Introduction to Accounting",
                     Number = "ACC101",
@@ -37,6 +58,8 @@ using Application.DAL;
             };
 
             Courses.ForEach(c => context.Course.Add(c));
+
+            context.SaveChanges();
         }
     }
 
@@ -46,6 +69,7 @@ using Application.DAL;
         {
             //AddColumn("dbo.DemoRecords", "Created", c => c.DateTime());
             AddColumn("dbo.Courses", "Created", c => c.DateTime(defaultValueSql: "GETDATE()"));
+            AddColumn("dbo.Organizations", "Created", c => c.DateTime(defaultValueSql: "GETDATE()"));
         }
         
         //public override void Down()

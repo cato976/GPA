@@ -50,6 +50,9 @@
     <Compile Include="CourseModule\CourseAggregate\Course.cs" />
     <Compile Include="CourseModule\CourseAggregate\CourseFactory.cs" />
     <Compile Include="CourseModule\CourseAggregate\ICourseRepository.cs" />
+    <Compile Include="CourseModule\OrganizationAggregate\IOrganizationRepository.cs" />
+    <Compile Include="CourseModule\OrganizationAggregate\Organization.cs" />
+    <Compile Include="CourseModule\OrganizationAggregate\OrganizationFactory.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

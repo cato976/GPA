@@ -8,6 +8,14 @@
     [ClockHour]      DECIMAL (18, 2) NOT NULL,
     [Description]    NVARCHAR (MAX)  NULL,
     [Created]        DATETIME        DEFAULT (getdate()) NOT NULL,
-    CONSTRAINT [PK_dbo.Courses] PRIMARY KEY CLUSTERED ([Id] ASC)
+    CONSTRAINT [PK_dbo.Courses] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_dbo.Courses_dbo.Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [dbo].[Organizations] ([Id]) ON DELETE CASCADE
 );
+
+
+
+
+GO
+CREATE NONCLUSTERED INDEX [IX_OrganizationId]
+    ON [dbo].[Courses]([OrganizationId] ASC);
 

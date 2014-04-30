@@ -3,6 +3,7 @@
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     using Application.Core.CourseModule.CourseAggregate;
+    using Application.Core.CourseModule.OrganizationAggregate;
     using Application.DAL.Contract;
     using System.Linq;
     using System.Collections.Generic;
@@ -29,10 +30,27 @@
             get
             {
                 if (_course == null)
+                {
                     _course = base.Set<Course>();
+                }
 
                 return _course;
             }
+        }
+
+        IDbSet<Organization> _organization;
+        public IDbSet<Organization> Organization
+        {
+            get
+            {
+                if (_organization == null)
+                {
+                    _organization = base.Set<Organization>();
+                }
+
+                return _organization;
+            }
+
         }
 
         #endregion IDbSet Members

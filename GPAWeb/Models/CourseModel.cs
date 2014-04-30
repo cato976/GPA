@@ -11,6 +11,7 @@ namespace GPAWeb.Models
 
         public int CourseId { get; set; }
         public int OrganizationId { get; set; }
+        public string OrganizationName { get; set; }
         public string UniversalId { get; set; }
         public string Name { get; set; }
         public string CourseNumber { get; set; }
