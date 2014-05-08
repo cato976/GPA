@@ -9,10 +9,12 @@
     using Application.Common.Logging;
     using Application.Common.Validator;
     using Application.Core.CourseModule.CourseAggregate;
+    using Application.Core.CourseModule.OrganizationAggregate;
     using Application.DAL;
     using Application.DAL.Contract;
     using Application.Manager.Course;
     using Application.Manager.Implementation;
+    using Application.Manager.Organization;
     using Application.Repository.CourseModule;
     using Castle.Facilities.Logging;
     using Castle.MicroKernel.Registration;
@@ -46,6 +48,8 @@
                         //Component.For<IProfilePhoneRepository, ProfilePhoneRepository>().ImplementedBy<ProfilePhoneRepository>().LifestyleSingleton(),
 
                         Component.For<ICourseManager>().ImplementedBy<CourseManager>(),
+                        Component.For<IOrganizationRepository, OrganizationRepository>().ImplementedBy<OrganizationRepository>(),
+                        Component.For<IOrganizationManager>().ImplementedBy<OrganizationManager>(),
 
                         Classes.FromThisAssembly().BasedOn<IHttpController>().LifestyleTransient()
                         //AllTypes.FromThisAssembly().BasedOn<IHttpController>().LifestyleTransient()

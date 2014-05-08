@@ -3,25 +3,47 @@
     using Application.Core.CourseModule.CourseAggregate;
     using Application.Core.CourseModule.OrganizationAggregate;
     using Application.DTO.CourseModule;
+    using Application.DTO.OrganizationModule;
 
     public static class Mapping
     {
         public static CourseDTO CourseToCourseDTO(Course course)
         {
-            CourseDTO objCourseDTO = new CourseDTO();
-            objCourseDTO.Id = course.Id;
-            objCourseDTO.OrganizationId = course.OrganizationId;
-            objCourseDTO.OrganizationName = course.Organization.Name;
-            objCourseDTO.Name = course.Name;
-            objCourseDTO.Description = course.Description;
-            objCourseDTO.OrganizationId = course.OrganizationId;
-            objCourseDTO.Number = course.Number;
-            objCourseDTO.UniversalId = course.UniversalId;
-            objCourseDTO.ClockHour = course.ClockHour;
-            objCourseDTO.CreditHour = course.CreditHour;
-            objCourseDTO.Created = course.Created;
+            CourseDTO objCourseDTO = new CourseDTO()
+            {
+                Id = course.Id,
+                OrganizationId = course.OrganizationId,
+                OrganizationName = course.Organization.Name,
+                Name = course.Name,
+                Description = course.Description,
+                Number = course.Number,
+                UniversalId = course.UniversalId,
+                ClockHour = course.ClockHour,
+                CreditHour = course.CreditHour,
+                Created = course.Created
+            };
 
             return objCourseDTO;
+        }
+
+        public static OrganizationDTO OrganizationToOrganizationDTO(Organization organization)
+        {
+            OrganizationDTO objOrganizationDTO = new OrganizationDTO()
+            {
+                Id = organization.Id,
+                Address1 = organization.Address1,
+                Address2 = organization.Address2,
+                Campus = organization.Campus,
+                City = organization.City,
+                Country = organization.Country,
+                Created = organization.Created,
+                Name = organization.Name,
+                OPEID = organization.OPEID,
+                State = organization.State,
+                ZipCode = organization.ZipCode
+            };
+
+            return objOrganizationDTO;
         }
     }
 }

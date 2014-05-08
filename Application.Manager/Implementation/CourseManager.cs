@@ -5,7 +5,9 @@
     using System.Linq;
     using Application.Common.Logging;
     using Application.DTO.CourseModule;
+    using Application.DTO.OrganizationModule;
     using Application.Manager.Course;
+    using Application.Manager.Organization;
     using Application.Manager.Resources;
     using Application.Repository.CourseModule;
 
@@ -22,7 +24,9 @@
         public CourseManager(CourseRepository courseRepository)
         {
             if (courseRepository == null)
+            {
                 throw new ArgumentNullException("courseRepository");
+            }
 
             _courseRepository = courseRepository;
         }
@@ -68,7 +72,7 @@
         public CourseDTO FindCourseById(int id)
         {
 
-            //recover orders
+            //recover courses
             var course = _courseRepository.Get(id);
 
             if (course != null)
@@ -76,7 +80,9 @@
                 return Conversion.Mapping.CourseToCourseDTO(course);
             }
             else //no data
+            {
                 return new CourseDTO();
+            }
 
         }
 
@@ -97,7 +103,9 @@
                 _courseRepository.UnitOfWork.Commit();
             }
             else //the course does not exist, cannot remove
+            {
                 LoggerFactory.CreateLog().LogWarning(Messages.warning_CannotRemoveNonExistingCourse);
+            }
         }
 
         public void InsertCourse(CourseDTO course)

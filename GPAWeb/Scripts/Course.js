@@ -24,7 +24,7 @@
 
 $(function () {
 
-var CoursesViewModel = function () {
+    var CoursesViewModel = function () {
     var self = this;
     var url = "/course/GetAllCourses";
 

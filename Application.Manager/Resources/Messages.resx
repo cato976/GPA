@@ -120,7 +120,13 @@
   <data name="warning_CannotRemoveNonExistingCourse" xml:space="preserve">
     <value>Can not delete non existing Course</value>
   </data>
+  <data name="warning_CannotRemoveNonExistingOrganization" xml:space="preserve">
+    <value>Can not delete non existing Organization</value>
+  </data>
   <data name="warning_InvalidArgumentForFindCourses" xml:space="preserve">
     <value>Invalid arguments when call to CourseManager's FindCourses</value>
+  </data>
+  <data name="warning_InvalidArgumentForFindOrganizations" xml:space="preserve">
+    <value>Invalid arguments when call to OrganizationManager's FindOrganizations</value>
   </data>
 </root>

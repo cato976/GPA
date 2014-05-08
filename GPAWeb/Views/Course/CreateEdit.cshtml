@@ -5,8 +5,13 @@
         <tr></tr>
     <tbody data-bind='with: course'>
         <tr>  
-            <td>
+           @* <td>
                 <input class="input-large" data-bind='value: OrganizationId'  placeholder="Organization Id"/>
+            </td>*@
+            <td>
+                <input list="organization" id="organizationInput" name="organization" class="input-large" placeholder="Organization" autocomplete="on" type="text" required="required" />
+                     <!-- populated on load via JSON -->
+                    <datalist id="organization" data-bind="foreach: Organizations"/>
             </td>  
             <td>
                 <input class="input-large" data-bind='value: UniversalId'  placeholder="Universal Id"/>

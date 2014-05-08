@@ -1,35 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.OleDb;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Http;
-using System.Web.Mvc;
-using Application.Manager.Course;
-
-namespace GPAWeb.Controllers
+﻿namespace GPAWeb.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data.OleDb;
+    using System.Data.SqlClient;
+    using System.Linq;
+    using System.Net;
+    using System.Web;
+    using System.Web.Http;
+    using System.Web.Mvc;
+    using Application.Manager.Course;
+    using Application.Manager.Organization;
+
     public class CourseController : Controller
     {
 
         #region Global declaration
 
         private readonly ICourseManager _courseManager;
+        private readonly IOrganizationManager _organizationManager;
+
+        //private readonly IOrganizationManager _organizationManager;
 
         #endregion Global declaration
         
         #region Constructor
 
-        public CourseController(ICourseManager courseManager)
+        public CourseController(ICourseManager courseManager, IOrganizationManager organizationManager)
         {
             _courseManager = courseManager;
+            _organizationManager = organizationManager;
         }
 
-        public CourseController()
-        {
-        }
+        //public CourseController()
+        //{
+        //}
 
         #endregion Constructor
 
@@ -49,6 +54,16 @@ namespace GPAWeb.Controllers
         {
             var courses = _courseManager.FindCourses(0, 20).AsQueryable();
             return this.Json(courses, JsonRequestBehavior.AllowGet);
+        }
+
+        /// <summary>
+        /// Get all Organization information
+        /// </summary>
+        /// <returns></returns>
+        public JsonResult GetAllOrganizations()
+        {
+            var organizations = _organizationManager.FindOrganizations(0, 20).AsQueryable();
+            return this.Json(organizations, JsonRequestBehavior.AllowGet);
         }
 
         //public ActionResult CreateEdit()
@@ -92,9 +107,19 @@ namespace GPAWeb.Controllers
         {
             if (course != null)
             {
+                Application.DTO.OrganizationModule.OrganizationDTO org = _organizationManager.FindOrganizationByName(course.OrganizationName);
+                if (org == null || org.Name != course.OrganizationName)
+                {
+                    // create a new organization
+                    org = new Application.DTO.OrganizationModule.OrganizationDTO();
+                    org.Name = course.OrganizationName;
+                    _organizationManager.InsertOrganization(org);
+                    org = _organizationManager.FindOrganizationByName(course.OrganizationName);
+                }
+
                 Application.DTO.CourseModule.CourseDTO cour = new Application.DTO.CourseModule.CourseDTO()
                 {
-                    OrganizationId = course.OrganizationId,
+                    OrganizationId = org.Id,
                     UniversalId = course.UniversalId,
                     Name = course.Name,
                     Number = course.CourseNumber,

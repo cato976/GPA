@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using Application.DTO.CourseModule;
+    using Application.DTO.OrganizationModule;
 
     public interface ICourseManager
     {
